@@ -47,7 +47,7 @@ struct CronItem {
 
 impl CronItem {
     pub fn parse(line: &str, now: &DateTime<Utc>) -> anyhow::Result<Option<Self>> {
-        let re = Regex::new(r"^((((\d+,)+\d+|(\d+(\/|-)\d+)|\d+|\*) ?){5})").unwrap();
+        let re = Regex::new(r"^((((\d+,)+\d+|(\d+(\/|-)\d+)|\d+|\*)(\/\d+)? ?){5})").unwrap();
         let line = line.trim();
 
         let schedule = re.find_iter(line).next().map(|c| c.as_str().trim());
