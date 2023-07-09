@@ -1,6 +1,6 @@
 [package]
 name = "cronwhen"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 description = "Command-line utility for printing the next iteration of configured crons."
@@ -11,6 +11,6 @@ repository = "https://github.com/aramperes/cronwhen"
 
 [dependencies]
 chrono = "^0.4"
-cron-parser = "*"
-anyhow = "*"
-regex = "*"
+cron-parser = "0.8"
+anyhow = "1"
+regex = "1"
